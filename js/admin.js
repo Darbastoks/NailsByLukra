@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/reservations';
+const API_URL = '/api/reservations';
 
 // On Login Page
 const loginForm = document.querySelector('.login-form');

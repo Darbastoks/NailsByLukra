@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bTime.disabled = true;
 
             try {
-                const response = await fetch(`http://localhost:5000/api/available-times?date=${selectedDate}`);
+                const response = await fetch(`/api/available-times?date=${selectedDate}`);
                 const data = await response.json();
 
                 const bookedTimes = data.bookedTimes || [];
@@ -123,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                // Point to local server port 5000 API where Express runs
-                const response = await fetch('http://localhost:5000/api/reservations', {
+                // Point to local server API where Express runs
+                const response = await fetch('/api/reservations', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
